@@ -53,3 +53,14 @@ gulp.task('copy_index',function () {
 })
 ```
 命令行中执行`gulp copy_index`，创建dest文件，把index.html复制到dest文件夹中。
+
+### 复制多个文件
+```javascript
+gulp.task('images', function () {
+    return gulp.src('images/*.jpg').pipe(gulp.dest('dest/images'))
+})
+```
+
+`images/*.jpg`glob语法。
+[glob wiki](https://en.wikipedia.org/wiki/Glob_(programming))
+Glob类似于regular expression，但是仅用来匹配档案路径名称。名称由来是UNIX一个负责解析匹配档案、叫做global command的模组。
