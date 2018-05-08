@@ -61,6 +61,15 @@ gulp.task('images', function () {
 })
 ```
 
-`images/*.jpg`glob语法。
-[glob wiki](https://en.wikipedia.org/wiki/Glob_(programming))
-Glob类似于regular expression，但是仅用来匹配档案路径名称。名称由来是UNIX一个负责解析匹配档案、叫做global command的模组。
+### globs
+
+> Glob类似于regular expression，但是仅用来匹配档案路径名称。名称由来是UNIX一个负责解析匹配档案、叫做global command的模组。
+> [glob wiki](https://en.wikipedia.org/wiki/Glob_(programming))
+- `images/*.jpg`
+- `images/*.{png,jpg}`
+- `images/*` 包含images目录下文件以及二级子目录，不包含子目录里的文件。
+- `images/*/*` 包含images目录下的文件以及二级子目录里的文件。
+- `images/**` 包含images目录下的所有文件和子目录下的文件。
+
+>多个globs可以用数组表示。
+- `['xml/*.xml', 'json/*.json']`
