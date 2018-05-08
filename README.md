@@ -32,11 +32,24 @@ gulp.task('hello2', function () {
 在命令行中执行`gulp hello1`，输出hello world1
 在命令行中执行`gulp hello2`，则输出hello world2
 
-
-
 ```javascript
 //创建默认执行的任务
 ···
 gulp.task('default', ['hello1','hello2'])
 ```
 在命令行中执行`gulp`，执行任务hello1、hello2，输出hello world1、hello world2
+
+## 基础功能
+- `gulp.src()`读取想要处理的文件
+- `pipe()`处理文件
+- `.pipe(gulp.dest())`处理好的文件放到指定的文件
+
+### 复制单个文件
+```javascript
+···
+//把目标文件`index.html`移动到`dest`文件夹
+gulp.task('copy_index',function () {
+    return gulp.src('index.html').pipe(gulp.dest('dest'))
+})
+```
+命令行中执行`gulp copy_index`，创建dest文件，把index.html复制到dest文件夹中。
