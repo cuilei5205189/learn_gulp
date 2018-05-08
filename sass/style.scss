@@ -1,0 +1,24 @@
+.box1 {
+    background: rgb(107, 195, 201);
+    .box2 {
+        height: 100px;
+        width: 300px;
+        background-color: red;
+        overflow: hidden;
+    }
+    .box3 {
+        height: 50px;
+        width: 30px;
+        background-color: yellow;
+    }
+    .box4 {
+        height: 50px;
+        width: 30px;
+        background-color: green;
+    }
+    .box5 {
+        height: 50px;
+        width: 400px;
+        background-color: rgb(116, 45, 167);
+    }
+}

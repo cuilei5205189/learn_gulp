@@ -71,5 +71,39 @@ gulp.task('images', function () {
 - `images/*/*` 包含images目录下的文件以及二级子目录里的文件。
 - `images/**` 包含images目录下的所有文件和子目录下的文件。
 
->多个globs可以用数组表示。
+多个globs可以用数组表示。
 - `['xml/*.xml', 'json/*.json']`
+
+排除不需要的文件
+- `!json/1.json` 排除这个文件
+
+### 主任务
+把多个任务放在数组里，可以**同时**执行这个几个任务。
+`['copy_index', 'images', 'data']`
+
+### 文件有变化时自动执行任务
+`gulp.watch`
+
+
+## 插件
+gulpjs.com/plugins
+- 编译sass、less文件
+- 合并、压缩、重命名文件
+- 创建本地开发服务器
+········
+
+### 1.使用`gulp-sass`
+1.命令行中
+`npm install gulp-sass --save-dev`
+2.gulpfile.js中
+```javascript
+···
+var sass = require('gulp-sass')
+
+```
+
+### 2.使用gulp-connect
+### 3.使用gulp-uglify
+### 4.使用gulp-rename
+### 5.使用gulp-minify-css
+### 6.使用gulp-imagemin
