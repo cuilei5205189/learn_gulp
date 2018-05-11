@@ -43,7 +43,7 @@ gulp.task('connect', function () {
 });
 
 gulp.task('live', function () {
-    gulp.src('dist/*.html')
+    gulp.src('dist/**')
         .pipe(connect.reload());
 });
 
